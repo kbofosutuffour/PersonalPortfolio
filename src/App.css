@@ -1,7 +1,8 @@
 #root {
-  max-width: 1280px;
+  /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
+  background-color: #D0A2F7;
 }
 
 .logo {
@@ -45,9 +46,17 @@ textarea {
 }
 
 .d-flex {
-  gap: 5px
+  gap: 5px;
 }
 
 .w-75 {
   border-width:thick;
+}
+
+body {
+  background-color: '#D0A2F7';
+}
+
+span {
+  font-size: large;
 }

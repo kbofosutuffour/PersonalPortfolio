@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import './App.css';
-import wm_logo from './assets/wm_logo_green.png';
 import data from './data.json';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -9,6 +8,8 @@ import rationales from './assets/Rationales.mp4';
 import maze from './assets/Maze.mp4';
 import weatherapp from './assets/WeatherApp.mp4';
 import editable from './assets/EditableResume.mp4';
+import Collapse from 'react-bootstrap/Collapse';
+
 
 export default function Projects() {
     const [index, setIndex] = useState(0);
@@ -18,120 +19,164 @@ export default function Projects() {
     return (
         <>
             
-            <div className='border p-5 m-5'>
+            <div id="projects" className='border p-5 m-md-5 mt-5 rounded' style={{backgroundColor: '#F1EAFF'}}>
                 <h3><u>Projects</u></h3>
                 
-                {projects[index] == "MarketApp" && <div className='row p-5'>
-                    <div className='col'>
-                        <div className='d-flex flex-row justify-content-center align-items-center w-100'>
-                            <video className='w-75 border border-dark rounded' autoPlay={true} muted={true} loop={true}>
-                                <source src={h2h} autoPlay={true} type='video/webm' />
-                            </video>
+                {(<Collapse in={projects[index] == "MarketApp"}>
+                    <div>
+                        <div className='row p-md-5 rounded d-flex flex-column-reverse flex-sm-row justify-content-center align-items-center' style={{columnGap: '20px',}}>
+                            <div className='col-4'>
+                                <div className='d-flex flex-row justify-content-center align-items-center w-100'>
+                                    <video style={{width: 200}} className='border border-dark rounded' autoPlay={true} muted={true} loop={true}>
+                                        <source src={h2h} autoPlay={true} type='video/webm' />
+                                    </video>
+                                </div>
+                            </div>
+                            <div className='col pt-sm-3'>
+                                <h5>H2H | College Based Market Application</h5>
+                                <span>
+                                Lead developer in a small team currently creating a full-stack mobile application for college students to sell and purchase
+                                products from other students. The application has many features that allow students to purchase
+                                products from other students.  Students can create, customize, and edit their app profiles, browse various types of items being
+                                sold, as well as chat with other students inside of the app.
+                                </span> <br /> <br />
+
+                                <div className='d-flex flex-column flex-sm-row'>
+                                    <div className='mx-3'>
+                                        <span>Technologies Used:</span>
+                                            <ul>
+                                            {data.projects.MarketApp.tech.map(value => {
+                                                return <li key={uuidv4()}>{value}</li>
+                                            })}
+                                        </ul>
+                                    </div>
+                                    <div className='mx-3'>
+                                        <span>Languages Used:</span>
+                                            <ul>
+                                            {data.projects.MarketApp.lang.map(value => {
+                                                return <li key={uuidv4()}>{value}</li>
+                                            })}
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                    <div className='col-8'>
-                        <h6>H2H | College Based Market Application</h6>
-                        <span>
-                        Lead developer in a small team currently creating a full-stack mobile application for college students to sell and purchase
-                        products from other students. The application has many features that allow students to purchase
-                        products from other students.  Students can create, customize, and edit their app profiles, browse various types of items being
-                        sold, as well as chat with other students inside of the app.
-                        </span> <br /> <br />
-
-                        <div className='d-flex flex-row'>
-                            <div className='mx-3'>
-                                <span>Technologies Used:</span>
-                                    <ul>
-                                    {data.projects.MarketApp.tech.map(value => {
-                                        return <li key={uuidv4()}>{value}</li>
-                                    })}
-                                </ul>
-                            </div>
-                            <div className='mx-3'>
-                                <span>Languages Used:</span>
-                                    <ul>
-                                    {data.projects.MarketApp.lang.map(value => {
-                                        return <li key={uuidv4()}>{value}</li>
-                                    })}
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>}
+                </Collapse>
+                )}
                 
-                {projects[index] == "Rationales" && 
-                (<div className='row p-5'>
-                    <div className='col'>
-                        <div className='d-flex flex-row justify-content-center align-items-center w-100'>
-                            <video className='w-100 border border-dark rounded' autoPlay={true} muted={true} loop={true}>
-                                <source src={rationales} autoPlay={true} type='video/mp4' />
-                            </video>
+                {(<Collapse in={projects[index] == "Rationales"} >
+                    <div>
+                        <div className='row p-md-5 rounded d-flex flex-column-reverse flex-sm-row justify-content-center align-items-center' style={{columnGap: '20px',}}>
+                            <div className='col'>
+                                <div className='d-flex flex-row justify-content-center align-items-center w-100'>
+                                    <video className='w-100 border border-dark rounded' autoPlay={true} muted={true} loop={true}>
+                                        <source src={rationales} autoPlay={true} type='video/mp4' />
+                                    </video>
+                                </div>
+                            </div>
+                            <div className='col-md-8 pt-sm-3'>
+                                <h6>Rationales Visualization Tool</h6>
+                                <span>
+                                    Rationales are an important topic in the development of Neural Code Models (NCM).
+                                    For all tokens generated by an NCM, <em>Rationales</em> are preceeding that contributed
+                                    to the model producing new tokens in the completed code output. <br /><br />
+                                    This project involved creating a web app that serves as a tool to help visualize rationales for tokens
+                                    generated by auto-completed code, as well as their taxonomy. 
+
+                                </span> <br /> <br />
+
+                                <div className='d-flex flex-column flex-sm-row'>
+                                    <div className='mx-3'>
+                                        <span>Technologies Used:</span>
+                                            <ul>
+                                            {data.projects.Rationales.tech.map(value => {
+                                                return <li key={uuidv4()}>{value}</li>
+                                            })}
+                                        </ul>
+                                    </div>
+                                    <div className='mx-3'>
+                                        <span>Languages Used:</span>
+                                            <ul>
+                                            {data.projects.Rationales.lang.map(value => {
+                                                return <li key={uuidv4()}>{value}</li>
+                                            })}
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
-                    <div className='col-6'>
-                        <h6>Rationales Visualization Tool</h6>
-                        <span>
-                            Rationales are an important topic in the development of Neural Code Models (NCM).
-                            For all tokens generated by an NCM, <em>Rationales</em> are preceeding that contributed
-                            to the model producing new tokens in the completed code output. <br /><br />
-                            This project involved creating a web app that serves as a tool to help visualize rationales for tokens
-                            generated by auto-completed code, as well as their taxonomy. 
-
-                        </span> <br /> <br />
-
-                        <div className='d-flex flex-row'>
-                            <div className='mx-3'>
-                                <span>Technologies Used:</span>
-                                    <ul>
-                                    {data.projects.Rationales.tech.map(value => {
-                                        return <li key={uuidv4()}>{value}</li>
-                                    })}
-                                </ul>
-                            </div>
-                            <div className='mx-3'>
-                                <span>Languages Used:</span>
-                                    <ul>
-                                    {data.projects.Rationales.lang.map(value => {
-                                        return <li key={uuidv4()}>{value}</li>
-                                    })}
-                                </ul>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>)}
+                </Collapse>
+                )}
                 
-                {projects[index] == "Maze" && 
-                    (<div className='row p-5'>
+                {(<Collapse in={projects[index] == "Maze"}>
+                    <div>
+                    <div className='row p-md-5 rounded d-flex flex-column-reverse flex-sm-row justify-content-center align-items-center' style={{columnGap: '20px',}}>
+                            <div className='col-4'>
+                                <div className='d-flex flex-row justify-content-center align-items-center w-100'>
+                                    <video style={{width: 200}} className='border border-dark rounded' autoPlay={true} muted={true} loop={true}>
+                                        <source src={maze} autoPlay={true} type='video/mp4' />
+                                    </video>
+                                </div>
+                            </div>
+                            <div className='col pt-3'>
+                                <h6>Android Maze Application</h6>
+                                <span>
+                                Developed an Android application that allows users to navigate through a
+                                maze in the 3rd person POV.  The game allows users to select from various
+                                difficulty levels and various maze sizes.
+                                </span> <br /> <br />
+
+                                <div className='d-flex flex-column flex-sm-row'>
+                                    <div className='mx-3'>
+                                        <span>Technologies Used:</span>
+                                            <ul>
+                                            {data.projects.Maze.tech.map(value => {
+                                                return <li key={uuidv4()}>{value}</li>
+                                            })}
+                                        </ul>
+                                    </div>
+                                    <div className='mx-3'>
+                                        <span>Languages Used:</span>
+                                            <ul>
+                                            {data.projects.Maze.lang.map(value => {
+                                                return <li key={uuidv4()}>{value}</li>
+                                            })}
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </Collapse>)}
+
+                {(<Collapse in={projects[index] == "WeatherApp"}>
+                <div>
+                    <div className='row p-md-5 rounded d-flex flex-column-reverse flex-md-row justify-content-center align-items-center' style={{columnGap: '20px',}}>
                         <div className='col'>
                             <div className='d-flex flex-row justify-content-center align-items-center w-100'>
-                                <video className='w-75 border border-dark rounded' autoPlay={true} muted={true} loop={true}>
-                                    <source src={maze} autoPlay={true} type='video/mp4' />
+                                <video className='w-100 border border-dark rounded' autoPlay={true} muted={true} loop={true}>
+                                    <source src={weatherapp} autoPlay={true} type='video/mp4' />
                                 </video>
                             </div>
                         </div>
-                        <div className='col-8'>
-                            <h6>Android Maze Application</h6>
+                        <div className='col-md-8 pt-sm-3'>
+                            <h6>Weather Forecast Website</h6>
                             <span>
-                            Developed an Android application that allows users to nagivate through a
-                            maze in the 3rd person POV.  The game allows users to select from various
-                            difficulty levels and various maze sizes.
+                                Simple weather forecast website that displays the current weather
+                                conditions at any specified location.  Retrieves information using API calls from
+                                <em>Free Weather API</em>
                             </span> <br /> <br />
 
-                            <div className='d-flex flex-row'>
-                                <div className='mx-3'>
-                                    <span>Technologies Used:</span>
-                                        <ul>
-                                        {data.projects.Maze.tech.map(value => {
-                                            return <li key={uuidv4()}>{value}</li>
-                                        })}
-                                    </ul>
-                                </div>
+                            <div className='d-flex flex-column flex-sm-row'>
                                 <div className='mx-3'>
                                     <span>Languages Used:</span>
                                         <ul>
-                                        {data.projects.Maze.lang.map(value => {
+                                        {data.projects.WeatherApp.lang.map(value => {
                                             return <li key={uuidv4()}>{value}</li>
                                         })}
                                     </ul>
@@ -139,79 +184,53 @@ export default function Projects() {
                             </div>
                             
                         </div>
-                    </div>)}
-
-                {projects[index] == "WeatherApp" && 
-                (<div className='row p-5'>
-                    <div className='col'>
-                        <div className='d-flex flex-row justify-content-center align-items-center w-100'>
-                            <video className='w-100 border border-dark rounded' autoPlay={true} muted={true} loop={true}>
-                                <source src={weatherapp} autoPlay={true} type='video/mp4' />
-                            </video>
-                        </div>
                     </div>
-                    <div className='col-6'>
-                        <h6>Weather Forecast Website</h6>
-                        <span>
-                            Simple weather forecast website that displays the current weather
-                            conditions at any specified location.  Retrieves information using API calls from
-                            <em>Free Weather API</em>
-                        </span> <br /> <br />
+                </div>
+                </Collapse>)}
 
-                        <div className='d-flex flex-row'>
-                            <div className='mx-3'>
-                                <span>Languages Used:</span>
-                                    <ul>
-                                    {data.projects.WeatherApp.lang.map(value => {
-                                        return <li key={uuidv4()}>{value}</li>
-                                    })}
-                                </ul>
+                {<Collapse in={projects[index] == "EditableResume"}>
+                    <div>
+                        <div className='row p-md-5 rounded d-flex flex-column-reverse flex-md-row justify-content-center align-items-center' style={{columnGap: '20px',}}>
+                            <div className='col'>
+                                <div className='d-flex flex-row justify-content-center align-items-center w-100'>
+                                    <video className='w-100 border border-dark rounded' autoPlay={true} muted={true} loop={true}>
+                                        <source src={editable} autoPlay={true} type='video/mp4' />
+                                    </video>
+                                </div>
+                            </div>
+                            <div className='col-md-8 pt-sm-3'>
+                                <h6>Editable Resume Builder</h6>
+                                <span>
+                                    Interface that allows users to create a resume using a
+                                    pre-built resume template.  User changes show in real time on
+                                    the resume.
+                                </span> <br /> <br />
+
+                                <div className='d-flex flex-column flex-sm-row'>
+                                    <div className='mx-3'>
+                                        <span>Technologies Used:</span>
+                                            <ul>
+                                                {data.projects.EditableResume.tech.map(value => {
+                                                    return <li key={uuidv4()}>{value}</li>
+                                                })}
+                                            </ul>
+                                    </div>
+                                    <div className='mx-3'>
+                                        <span>Languages Used:</span>
+                                            <ul>
+                                            {data.projects.EditableResume.lang.map(value => {
+                                                return <li key={uuidv4()}>{value}</li>
+                                            })}
+                                        </ul>
+                                    </div>
+                                </div>
+                                
                             </div>
                         </div>
-                        
                     </div>
-                </div>)}
+                </Collapse>}
 
-                {projects[index] == "EditableResume" && 
-                <div className='row p-5'>
-                    <div className='col'>
-                        <div className='d-flex flex-row justify-content-center align-items-center w-100'>
-                            <video className='w-100 border border-dark rounded' autoPlay={true} muted={true} loop={true}>
-                                <source src={editable} autoPlay={true} type='video/mp4' />
-                            </video>
-                        </div>
-                    </div>
-                    <div className='col-6'>
-                        <h6>Editable Resume Builder</h6>
-                        <span>
-                            Interface that allows users to create a resume using a
-                            pre-built resume template.  User changes show in real time on
-                            the resume.
-                        </span> <br /> <br />
-
-                        <div className='d-flex flex-row'>
-                            <div className='mx-3'>
-                                <span>Technologies Used:</span>
-                                    <ul>
-                                        {data.projects.EditableResume.tech.map(value => {
-                                            return <li key={uuidv4()}>{value}</li>
-                                        })}
-                                    </ul>
-                            </div>
-                            <div className='mx-3'>
-                                <span>Languages Used:</span>
-                                    <ul>
-                                    {data.projects.EditableResume.lang.map(value => {
-                                        return <li key={uuidv4()}>{value}</li>
-                                    })}
-                                </ul>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>}
-
-                <div className='d-flex flex-row justify-content-center align-items-center'>
+                <div className='d-flex flex-row justify-content-center align-items-center mt-3'>
                     <button onClick={() => setIndex(index - 1 >= 0 ? index - 1 : projects.length-1)}>Back</button>
                     <button onClick={() => setIndex(index + 1 < projects.length ? index + 1 : 0)}>Next</button>
                 </div>

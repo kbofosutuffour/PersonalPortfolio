@@ -2,13 +2,13 @@ import './App.css'
  
 export default function Introduction() {
     return (
-        <div className='container-fluid'>
+    <div id="about" className='container-fluid bg-white'>
         <div className='row'>
-            <div className='col border p-2'>
+            <div className='col-md border p-2'>
                 <h4>Who am I?</h4>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.sit amet, Qui deserunt consequatur fugit repellendusillo voluptas?</span>
+                <span>Hardworking college student with great interest in software development.  Diligent and resilient with my work.</span>
             </div>
-            <div className='col border p-2'>
+            <div className='col-md border p-2'>
                 <h4>Personal Info</h4>
                 <ul className="list-unstyled">
                     <li className='py-1'>Email: kbofosutuffour@wm.edu</li>
@@ -17,7 +17,7 @@ export default function Introduction() {
                 </ul>
 
             </div>
-            <div className='col border p-2'>
+            <div className='col-md border p-2'>
                 <h4>Expertise</h4>
                 <ul>
                     <li>Front-end web development</li>
