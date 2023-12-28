@@ -19,12 +19,12 @@ export default function Projects() {
     return (
         <>
             
-            <div id="projects" className='border p-5 m-md-5 mt-5 rounded' style={{backgroundColor: '#F1EAFF'}}>
+            <div id="projects" className='border p-5 mx-0 mt-5 d-flex flex-column justify-content-center align-items-center' style={{backgroundColor: '#F1EAFF'}}>
                 <h3><u>Projects</u></h3>
                 
                 {(<Collapse in={projects[index] == "MarketApp"}>
                     <div>
-                        <div className='row p-md-5 rounded d-flex flex-column-reverse flex-sm-row justify-content-center align-items-center' style={{columnGap: '20px',}}>
+                        <div className='row p-md-5 d-flex flex-column-reverse flex-sm-row justify-content-center align-items-center'>
                             <div className='col-4'>
                                 <div className='d-flex flex-row justify-content-center align-items-center w-100'>
                                     <video style={{width: 200}} className='border border-dark rounded' autoPlay={true} muted={true} loop={true}>
@@ -68,7 +68,7 @@ export default function Projects() {
                 
                 {(<Collapse in={projects[index] == "Rationales"} >
                     <div>
-                        <div className='row p-md-5 rounded d-flex flex-column-reverse flex-sm-row justify-content-center align-items-center' style={{columnGap: '20px',}}>
+                    <div className='row p-md-5 rounded d-flex flex-column-reverse flex-md-row justify-content-center align-items-center' style={{columnGap: '20px',}}>
                             <div className='col'>
                                 <div className='d-flex flex-row justify-content-center align-items-center w-100'>
                                     <video className='w-100 border border-dark rounded' autoPlay={true} muted={true} loop={true}>

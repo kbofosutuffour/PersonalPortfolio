@@ -16,21 +16,29 @@ export default function Education() {
     const classes = data.classes;
 
     return (
+        <>
 
-            <div id="education" className='border p-5 m-md-5 mt-5 rounded' style={{backgroundColor: '#F1EAFF'}}>
-                <div>
-                    <h3><u>Education</u></h3>
-                    <div style={{columnGap: 10,}} className='d-flex flex-column flex-md-row justify-content-flex-start align-items-center mt-3'>
-                        <div><img style={{width: 125}} src={wm_logo}/></div>
-                        <div>
-                            <h4>College of William and Mary</h4>
-                            <h5>Bachelor of Science: Computer Science, Mathematics</h5>
-                            <span>Cumulative GPA: 3.7</span>
-                        </div>
+            <div id="education" className='d-flex flex-column justify-content-center align-items-center p-3 pb-4 mx-5 my-3 rounded' >
+                <h3><u>Education</u></h3>
+                <div style={{columnGap: 10,}} className='d-flex flex-column flex-md-row justify-content-flex-start align-items-center mt-3'>
+                    <div><img style={{width: 125}} src={wm_logo}/></div>
+                    <div>
+                        <h4>College of William and Mary</h4>
+                        <h5>Bachelor of Science: Computer Science, Mathematics</h5>
+                        <span>Cumulative GPA: 3.7</span>
                     </div>
+                </div>
+            </div>
 
-                    <div className='px--md-5 py-ms-2 mt-5 rounded'>
-                        <h4>Classes</h4>
+            <div className='border border-dark d-flex flex-column justify-content-center align-items-center p-3 py-3 mx-0 mx-md-5 rounded'>
+                    <h3><u>Classes</u></h3>
+                        <div className='d-none d-md-flex flex-row justify-content-center align-items-center' style={{columnGap: '30px'}}>
+                            <div style={{textDecoration: classes[index].id == 301 ? 'underline' : 'none', fontSize: 'larger'}} onClick={() => setIndex(0)}>Software Development</div>
+                            <div style={{textDecoration: classes[index].id == 435 ? 'underline' : 'none', fontSize: 'larger'}} onClick={() => setIndex(1)}>Software Engineering</div>
+                            <div style={{textDecoration: classes[index].id == 421 ? 'underline' : 'none', fontSize: 'larger'}} onClick={() => setIndex(2)}>Database Systems</div>
+                            <div style={{textDecoration: classes[index].id == 241 ? 'underline' : 'none', fontSize: 'larger'}} onClick={() => setIndex(3)}>Data Structures</div>
+                            <div style={{textDecoration: classes[index].id == 303 ? 'underline' : 'none', fontSize: 'larger'}} onClick={() => setIndex(4)}>Algorithms</div>
+                        </div>
 
                         {(<Collapse in={classes[index].id == 301}>
                             <div><div className='column row-md p-md-5 d-flex flex-column-reverse flex-md-row justify-content-center align-items-center'>
@@ -131,15 +139,12 @@ export default function Education() {
 
                             </div></div>
                         </Collapse>)}
-                        <div className='d-flex flex-row justify-content-center align-items-center mt-3 mt-md-0'>
+                        <div className='d-flex d-md-none flex-row justify-content-center align-items-center mt-3 mt-md-0'>
                             <button onClick={() => setIndex(index - 1 >= 0 ? index - 1 : classes.length-1)}>Back</button>
                             <button onClick={() => setIndex(index + 1 < classes.length ? index + 1 : 0)}>Next</button>
                         </div>
-                    </div>
-
                 </div>
-            </div>
 
-    )
+    </>)
 
 }

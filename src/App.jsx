@@ -12,14 +12,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   return (
-    <div>
+    <>
       <Header />
       <Introduction />
       <Education />
       <Projects />
       <WorkExperience />
       <Footer />
-    </div>
+    </>
   )
 }
 

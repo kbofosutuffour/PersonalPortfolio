@@ -2,7 +2,7 @@ import './App.css'
  
 export default function Introduction() {
     return (
-    <div id="about" className='container-fluid bg-white'>
+    <div id="about" className='bg-white mx-0 mx-mb-5'>
         <div className='row'>
             <div className='col-md border p-2'>
                 <h4>Who am I?</h4>

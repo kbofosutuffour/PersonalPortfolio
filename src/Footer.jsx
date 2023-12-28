@@ -24,7 +24,8 @@ export default function Footer() {
                     <h5>Get in touch</h5>
                     <p>Phone: +1 (804) 502-9552</p>
                     <p>Email: kbofosutuffour@wm.edu</p>
-                    <a href='www.linkedin.com/in/kwaku-ofosu-tuffour-6827871b5'><p>LinkedIn</p></a>
+                    <p>LinkedIn: kwaku-ofosu-tuffour-6827871b5</p>
+                    {/* <a href={'www.linkedin.com/in/kwaku-ofosu-tuffour-6827871b5'}><p>LinkedIn</p></a> */}
                 </div>
             </div>
         </footer>
