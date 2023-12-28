@@ -139,7 +139,7 @@ export default function Education() {
 
                             </div></div>
                         </Collapse>)}
-                        <div className='d-flex d-md-none flex-row justify-content-center align-items-center mt-3 mt-md-0'>
+                        <div className='d-flex flex-row justify-content-center align-items-center'>
                             <button onClick={() => setIndex(index - 1 >= 0 ? index - 1 : classes.length-1)}>Back</button>
                             <button onClick={() => setIndex(index + 1 < classes.length ? index + 1 : 0)}>Next</button>
                         </div>

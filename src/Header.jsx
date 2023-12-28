@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 
 export default function Headers() {
+    // eslint-disable-next-line no-unused-vars
     const [section, setSection] = useState("Home");
 
     return (
@@ -19,9 +20,10 @@ export default function Headers() {
                     <div onClick={() => setSection("Home")} style={{fontSize: 'larger'}}>Home</div>
                 </a>
                 <a className='navbar-brand px-1 d-none d-md-block' href="#about"><div onClick={() => setSection("Home")} style={{fontSize: 'larger'}}>About</div></a>
-                <a className='navbar-brand px-1' href="#education"><div onClick={() => setSection("Home")} style={{fontSize: 'larger'}}>Education</div></a>
-                <a className='navbar-brand px-1' href="#projects"><div onClick={() => setSection("Home")} style={{fontSize: 'larger'}}>Projects</div></a>
-                <a className='navbar-brand px-1' href="#workexperience"><div onClick={() => setSection("Home")} style={{fontSize: 'larger'}}>Work Experience</div></a>
+                <a className='navbar-brand px-1' href="#education"><div onClick={() => setSection("Education")} style={{fontSize: 'larger'}}>Education</div></a>
+                <a className='navbar-brand px-1' href="#skills"><div onClick={() => setSection("Skills")} style={{fontSize: 'larger'}}>Skills</div></a>
+                <a className='navbar-brand px-1' href="#projects"><div onClick={() => setSection("Projects")} style={{fontSize: 'larger'}}>Projects</div></a>
+                <a className='navbar-brand px-1 d-none d-md-block' href="#workexperience"><div onClick={() => setSection("Work Experience")} style={{fontSize: 'larger'}}>Work Experience</div></a>
 
             </nav>
         </>

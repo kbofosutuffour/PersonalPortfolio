@@ -60,3 +60,9 @@ body {
 span {
   font-size: large;
 }
+
+#skills {
+  background-color: #F1EAFF;
+  /* padding-left: 0rem !important;
+  padding-right: 0rem !important; */
+}
