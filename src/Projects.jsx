@@ -51,7 +51,8 @@ export default function Projects() {
                                 <span>
                                 For this project, the JavaScript-based <em><b>React Native</b></em> Mobile App development framework is used as the frontend to create all screens that the
                                 user interacts with.  The frontend communicates with data stored in our SQL database using <em><b>Django</b></em>, a Python-based backend framework.
-                                An API created using Django&#39;s REST API framework provides the medium of communication between the frontend and the backend.
+                                An API created using <em><b> Django&#39;s REST API framework</b></em> provides the medium of communication between the frontend and the backend.  Django creates, retrieves, updates
+                                and deletes information from a PostgreSQL database hosted on AWS, specifically <em><b>Amazon RDS</b></em>.
                                 </span>
                             </div>
                         </div>
@@ -140,9 +141,11 @@ export default function Projects() {
                             <span style={{fontSize: 'larger'}}>
                                 Simple weather forecast website that displays the current weather
                                 conditions at any specified location.  Retrieves information using API calls from
-                                <a href="https://www.weatherapi.com/"><em>Free Weather API</em></a>.  
+                                <a href="https://www.weatherapi.com/"><em> Free Weather API</em></a>.  
                                 The project uses <em><b>HTML, CSS, </b></em>and vanilla <em><b>JavaScript</b></em>
                             </span> <br /> <br />
+
+                            <span>To view the website live, click <a href='https://kbofosutuffour.github.io/WeatherApp/'>here.</a></span>
                         </div>
                     </div>
                 </div>
@@ -174,6 +177,8 @@ export default function Projects() {
                     <button onClick={() => setIndex(index - 1 >= 0 ? index - 1 : projects.length-1)}>Back</button>
                     <button onClick={() => setIndex(index + 1 < projects.length ? index + 1 : 0)}>Next</button>
                 </div>
+
+                <p className='mt-3'>NOTE: This portfolio website uses <em><b>React.js</b></em> and <em><b>Bootstrap</b></em></p>
             </div>
 
         </>

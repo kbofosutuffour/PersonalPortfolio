@@ -10,7 +10,7 @@ export default function Skills() {
                     <li style={{fontSize: 'large'}}><em><b>Front-end Development:  </b></em>HTML/cSS, JQuery, React.js, Bootstrap</li>
                     <li style={{fontSize: 'large'}}><em><b>Back-end Development:  </b></em> Django (w/ REST API Framework)</li>
                     <li style={{fontSize: 'large'}}><em><b>Mobile App Development:  </b></em>React Native, Android Studio</li>
-                    <li style={{fontSize: 'large'}}><em><b>Data Management:  </b></em>SQL, Microsoft Office</li>
+                    <li style={{fontSize: 'large'}}><em><b>Data Management:  </b></em>SQL, PostgreSQL, Microsoft Office</li>
                     <li style={{fontSize: 'large'}}>Other Software:  Eclipse, LaTeX</li>
                 </ul>
             </div>
