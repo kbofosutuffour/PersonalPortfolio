@@ -12,10 +12,9 @@ export default function WorkExperience() {
                 <div className='col-md-9'>
                     <h5>Chesterfield County IST: Data Analytics Intern</h5>
                     <span>
-                        Here, I worked closely with the Data & Analytics team of Chesterfield County IST.  I was responsible for managing and
-                        analyzing data commonly used by various departments throughout Chesterfield County&#39;s department of Human Resources.  The data analysis was
-                        done using SQL, specifically MySQL using Microsoft Azure Studio.  The queries developed were used to determine inconsistencies that were
-                        present across different database schema, such as differing addresses or differing descriptions for county buildings.  These inconsistencies were
+                        In close collaboration with Chesterfield County&#39;s IST Data & Analytics team, I was responsible for the management and analysis of data
+                        critical to the operations of various departments within the county&#39;s Human Resources division.  Employing SQL, specifically MySQL via Microsoft Azure Studio, I conducted comprehensive data analyses to improve operational effectiveness and resource distribution.
+                        This analysis was used to determine inconsistencies present across different database schema, such as variations in addresses or differing descriptions for county buildings.  inconsistencies were
                         mainly found by relating rows of tables using a building&#39;s Parcel ID.
                     </span>
                 </div>

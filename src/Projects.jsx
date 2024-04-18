@@ -89,8 +89,8 @@ export default function Projects() {
                                 For this project, the JavaScript library <em><b>React.js</b></em> is used to build the frontend of the website.
                                 The frontend either displays examples of generated code and its rationales from data stored within the React codebase <i>or</i>
                                 displays completed code generated from user input.  The second option is powered by the following 
-                                <a href="https://github.com/keyonvafa/sequential-rationales"> Rationalization Model </a>.  Input code and completed generated code are
-                                sent between the frontend and the model using <em><b>Flask</b></em>, a python based backend framework.
+                                <a href="https://github.com/keyonvafa/sequential-rationales"> Rationalization Model </a>.  The communication between the frontend and the model, involving input code and completed generated code, is managed using
+                                <em><b> Flask</b></em>, a Python-based backend framework.
                                 </span>
                                 
                             </div>
@@ -119,9 +119,9 @@ export default function Projects() {
                                 </span> <br /> <br />
 
                                 <span>
-                                The maze generation is done using various graphing algorithms implemented in <em>Java</em>,
-                                including DFS, Prim, and Boruvka&#39;s graph algorithms.  The automated maze player is also implemented
-                                using <em>Java</em>, using a &#34;Wizard&#34; (which actually already knows the path to the exit), or the
+                                The core of the application&apos;s functionality lies in maze generation, done through the implementation of various graphing algorithms
+                                 in <em>Java</em>, including DFS, Prim, and Boruvka&apos;s algorithms. Moreover, the automated maze player, also developed in Java, offers users the choice between a
+                                Wizard algorithm, which possesses pre-knowledge of the exit path, or the
                                 <a href="https://andrewyong7338.medium.com/maze-escape-with-wall-following-algorithm-170c35b88e00"> Wall Follower </a>
                                 algorithm.  The frontend is developed using Android Studio.
                                 </span>
@@ -144,10 +144,9 @@ export default function Projects() {
                         <div className='col-md-6 pt-sm-3'>
                             <h5>Weather Forecast Website</h5>
                             <span style={{fontSize: 'larger'}}>
-                                Simple weather forecast website that displays the current weather
-                                conditions at any specified location.  Retrieves information using API calls from
-                                <a href="https://www.weatherapi.com/"><em> Free Weather API</em></a>.  
-                                The project uses <em><b>HTML, CSS, </b></em>and vanilla <em><b>JavaScript</b></em>
+                                Simple weather forecast website that provides users with up-to-date weather conditions for any specified location. 
+                                Using API calls from the Free Weather API, the website retrieves real-time weather information.
+                                The project is built using a combination of <em><b>HTML, CSS, </b></em>and vanilla <em><b>JavaScript</b></em>
                             </span> <br /> <br />
 
                             <span>To view the website live, click <a href='https://kbofosutuffour.github.io/WeatherApp/'>here.</a></span>
