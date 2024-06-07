@@ -7,6 +7,8 @@ import h2h from './assets/H2H.mp4';
 import rationales from './assets/Rationales.mp4';
 import maze from './assets/Maze.mp4';
 import weatherapp from './assets/WeatherApp.mp4';
+import anime from './assets/Anime.mp4';
+import mic from './assets/Mic.mp4'
 import editable from './assets/EditableResume.mp4';
 import Collapse from 'react-bootstrap/Collapse';
 
@@ -18,15 +20,21 @@ export default function Projects() {
     return (
         <>
             
-            <div id="projects" className='p-3 mx-0 mt-5 d-flex flex-column justify-content-center align-items-center'>
+            <div id="projects" className='p-2 mx-0 mt-5 d-flex flex-column justify-content-center align-items-center'>
                 <h3><u>Projects</u></h3>
 
                 <div className='d-none d-md-flex flex-row justify-content-center align-items-center' style={{columnGap: '30px'}}>
-                    <div style={{textDecoration: projects[index] == "MarketApp" ? 'underline' : 'none', fontSize: 'larger'}} onClick={() => setIndex(0)}>H2H | Market Application</div>
-                    <div style={{textDecoration: projects[index] == "Rationales" ? 'underline' : 'none', fontSize: 'larger'}} onClick={() => setIndex(1)}>Rationales Visualization</div>
-                    <div style={{textDecoration: projects[index] == "Maze" ? 'underline' : 'none', fontSize: 'larger'}} onClick={() => setIndex(2)}>Android Maze Game</div>
-                    <div style={{textDecoration: projects[index] == "WeatherApp" ? 'underline' : 'none', fontSize: 'larger'}} onClick={() => setIndex(3)}>Weather Forecast Website</div>
-                    <div style={{textDecoration: projects[index] == "EditableResume" ? 'underline' : 'none', fontSize: 'larger'}} onClick={() => setIndex(4)}>Editable Resume Builder</div>
+                    {index < 4 && <>
+                        <div style={{ textDecoration: projects[index] == "MarketApp" ? 'underline' : 'none', fontSize: 'larger' }} onClick={() => setIndex(0)}>H2H | Market Application</div>
+                        <div style={{ textDecoration: projects[index] == "Rationales" ? 'underline' : 'none', fontSize: 'larger' }} onClick={() => setIndex(1)}>Rationales Visualization</div>
+                        <div style={{ textDecoration: projects[index] == "Anime" ? 'underline' : 'none', fontSize: 'larger' }} onClick={() => setIndex(2)}>Anime Versus Web Application</div>
+                        <div style={{ textDecoration: projects[index] == "Mic" ? 'underline' : 'none', fontSize: 'larger' }} onClick={() => setIndex(3)}>Cell Phone Mic Challenge</div>
+                    </>}
+                    {index >= 4  && <>
+                        <div style={{ textDecoration: projects[index] == "Maze" ? 'underline' : 'none', fontSize: 'larger' }} onClick={() => setIndex(4)}>Android Maze Game</div>
+                        <div style={{ textDecoration: projects[index] == "WeatherApp" ? 'underline' : 'none', fontSize: 'larger' }} onClick={() => setIndex(5)}>Weather Forecast Website</div>
+                        <div style={{ textDecoration: projects[index] == "EditableResume" ? 'underline' : 'none', fontSize: 'larger' }} onClick={() => setIndex(6)}>Editable Resume Builder</div>
+                    </>}
                 </div>
                 
                 {(<Collapse in={projects[index] == "MarketApp"}>
@@ -98,6 +106,69 @@ export default function Projects() {
                     </div>
                 </Collapse>
                 )}
+
+                {(<Collapse in={projects[index] == "Anime"}>
+                    <div>
+                    <div className='row p-md-5 rounded d-flex flex-column-reverse flex-sm-row justify-content-center align-items-center' style={{columnGap: '20px',}}>
+                        <div className='col'>
+                                <div className='d-flex flex-row justify-content-center align-items-center w-100'>
+                                    <video className='w-100 border border-dark rounded' autoPlay={true} muted={true} loop={true}>
+                                        <source src={anime} autoPlay={true} type='video/mp4' />
+                                    </video>
+                                </div>
+                            </div>
+                            <div className='col pt-3'>
+                                <h5>Anime Versus Web Application</h5>
+                                <span style={{fontSize: 'larger'}}>
+                                User ranking of anime characters based off of head-to-head battles visualized by web-scraped fandom images. Uses
+                                Angular as the front-end framework to present data to the user, and Flask equipped with a REST API as the
+                                back-end framework to distribute data. Flask API hosted on Heroku, and Angular app on Github Pages.
+                                </span> <br /> <br />
+
+                                <span>
+                                This project was submitted for Hoohacks 2024.  To learn more about the project, please visit the <a href='https://devpost.com/software/animeversus'>Hoohacks DevPost</a> submission
+                                </span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </Collapse>)}
+
+                {(<Collapse in={projects[index] == "Mic"}>
+                    <div>
+                    <div className='row p-md-5 rounded d-flex flex-column-reverse flex-sm-row justify-content-center align-items-center' style={{columnGap: '20px',}}>
+                            <div className='col-4'>
+                                <div className='d-flex flex-row justify-content-center align-items-center w-100'>
+                                    <video style={{width: 200}} className='border border-dark rounded' autoPlay={true} muted={true} loop={true}>
+                                        <source src={mic} autoPlay={true} type='video/mp4' />
+                                    </video>
+                                </div>
+                            </div>
+                            <div className='col pt-3'>
+                                <h5>Cell Phone Mic Challenge</h5>
+                                <span style={{fontSize: 'larger'}}>
+                                The mobile application records audio from a piece of rotating or reciprocating machinery, analyzes its current condition, and displays information for users. 
+                                The app allows users to enter a known load value, and users are then able to record an audio sample. 
+                                The audio sample is analyzed against known loads, and an estimate for the actual load for that audio sample is returned. 
+                                The app displays the Fast Fourier Transform for the recorded sample, as well as the known and unknown load values, helping to intuitively display the performance of the machine.
+                                </span> <br /> <br />
+
+                                <span>
+                                React Native, a JavaScript frontend framework, creates the frontend of the cross-platform application. 
+                                Flask, a python backend framework, analyzes audio data sent front the frontend. 
+                                We used a Random Forest Decision Tree to analyze various metrics, including dominant frequencies and the spectral centroid, to interpolate the predicted value of the load. 
+                                Once this data was acquired, we communicated it to the front end to be displayed in the app.
+                                </span> <br /> <br />
+
+                                <span>
+                                This project won the <em>Cell Phone Mic Challenge</em> portion of TribeHacks 2024.  
+                                To learn more about the project, visit the <a href="https://devpost.com/software/cell-phone-mic-challenge">TribeHacks Devpost</a> submission.
+                                </span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </Collapse>)}
                 
                 {(<Collapse in={projects[index] == "Maze"}>
                     <div>
@@ -176,6 +247,9 @@ export default function Projects() {
                         </div>
                     </div>
                 </Collapse>}
+                <div className='d-flex flex-row justify-content-center align-items-center mb-3'>
+                    <div style={{fontSize: 'x-large', fontWeight: 'bold'}}>{index+1}/{projects.length}</div>
+                </div>
 
                 <div className='d-flex flex-row justify-content-center align-items-center'>
                     <button onClick={() => setIndex(index - 1 >= 0 ? index - 1 : projects.length-1)}>Back</button>

@@ -39,6 +39,18 @@
             "tech": ["React.js", "Flask", "Material UI"],
             "lang": ["Javascript", "Python"]
         },
+        "Anime": {
+            "title": "Anime Versus Web Application",
+            "desc": "User ranking of anime characters based off of head-to-head battles visualized by web-scraped fandom images. Uses Angular as the front-end framework to present data to the user, and Flask equipped with a REST API as the back-end framework to distribute data. Flask API hosted on Heroku, and Angular app on Github Pages.  Submitted for Hoohacks 2024.",
+            "tech": ["Angular", "Flask", "Heroku"],
+            "lang": ["Javascript", "Python"]
+        },
+        "Mic": {
+            "title": "Cell Phone Mic Challenge",
+            "desc": [],
+            "tech": ["React Native", "Flask"],
+            "lang": ["Javascript", "Python"]
+        },
         "Maze": {
             "title": "Android Maze Game",
             "desc": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.sit amet, Qui deserunt consequatur fugit repellendusillo voluptas?",

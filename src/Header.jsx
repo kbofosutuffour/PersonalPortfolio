@@ -11,7 +11,7 @@ export default function Headers() {
         <>
             <div className='col px-5 py-2'>
                 <h1 style={{textDecoration: 'underline', textDecorationColor: '#C0AFFB'}}>Kwaku Ofosu-Tuffour</h1>
-                <h3>Software Engineer | Web Developer</h3>
+                <h3>Software Developer</h3>
                 <a href={resume} download={"Resume - Kwaku Ofosu-Tuffour"}>
                 <button>Print Resume</button></a>
             </div>
@@ -22,8 +22,8 @@ export default function Headers() {
                 <a className='navbar-brand px-1 d-none d-md-block' href="#about"><div onClick={() => setSection("Home")} style={{fontSize: 'larger'}}>About</div></a>
                 <a className='navbar-brand px-1' href="#education"><div onClick={() => setSection("Education")} style={{fontSize: 'larger'}}>Education</div></a>
                 <a className='navbar-brand px-1' href="#skills"><div onClick={() => setSection("Skills")} style={{fontSize: 'larger'}}>Skills</div></a>
-                <a className='navbar-brand px-1' href="#projects"><div onClick={() => setSection("Projects")} style={{fontSize: 'larger'}}>Projects</div></a>
                 <a className='navbar-brand px-1 d-none d-md-block' href="#workexperience"><div onClick={() => setSection("Work Experience")} style={{fontSize: 'larger'}}>Work Experience</div></a>
+                <a className='navbar-brand px-1' href="#projects"><div onClick={() => setSection("Projects")} style={{fontSize: 'larger'}}>Projects</div></a>
 
             </nav>
         </>

@@ -25,7 +25,7 @@ export default function Footer() {
                 <div className='col-md px-5 py-3 p-md-5'>
                     <h4>Get in touch</h4>
                     <p style={{fontSize: 'larger'}}>Phone: +1 (804) 502-9552</p>
-                    <p style={{fontSize: 'larger'}}>Email: kbofosutuffour@wm.edu</p>
+                    <p style={{fontSize: 'larger'}}>Email: kbofosutuffour@gmail.com</p>
                     <a href="https://www.linkedin.com/in/kwaku-ofosu-tuffour-6827871b5"><p style={{fontSize: 'larger'}}>LinkedIn</p></a>
                 </div>
             </div>
