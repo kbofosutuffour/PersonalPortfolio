@@ -11,9 +11,9 @@ export default function Headers() {
         <>
             <div className='col px-5 py-2'>
                 <h1 style={{textDecoration: 'underline', textDecorationColor: '#C0AFFB'}}>Kwaku Ofosu-Tuffour</h1>
-                <h3>Software Developer</h3>
+                <h3>Software Engineer</h3>
                 <a href={resume} download={"Resume - Kwaku Ofosu-Tuffour"}>
-                <button>Print Resume</button></a>
+                <button>Download Resume</button></a>
             </div>
             <nav className="sticky-top d-flex flex-row justify-content-center justify-content-md-between align-items-center py-3 mx-0 mx-mb-5" style={{backgroundColor: '#C0B0FB', padding: '20px 70px'}}>
                 <a className='navbar-brand px-1 d-none d-md-block' >

@@ -25,7 +25,7 @@ export default function Education() {
                     <div>
                         <h4>College of William and Mary</h4>
                         <h5>Bachelor of Science: Computer Science, Mathematics</h5>
-                        <span>GPA: 3.7</span>
+                        <span>GPA: 3.7 (<em>Magna Cum Laude</em>)</span>
                     </div>
                 </div>
             </div>
